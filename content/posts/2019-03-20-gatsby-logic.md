@@ -2,7 +2,7 @@
 template: post
 title: Gatsby Logic
 slug: /posts/Gatsby Logic
-draft: true
+draft: false
 date: 2019-03-20T15:32:19.830Z
 description: >-
   Fast in every way that matters.
