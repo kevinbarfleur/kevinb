@@ -40,7 +40,6 @@
     "bluebird": "^3.5.2",
     "classnames": "^2.2.6",
     "codecov": "^3.1.0",
-    "csshake": "^1.5.3",
     "gatsby": "^2.0.116",
     "gatsby-link": "^2.0.10",
     "gatsby-plugin-catch-links": "^2.0.10",
