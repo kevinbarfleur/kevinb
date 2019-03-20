@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  url: 'https://kevinb.netlify.com',
+  title: 'Code - Kévin B',
+  subtitle: 'Guides et tutos pour les débutants du web',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -23,9 +23,10 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
+    name: 'Kévin B',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio:
+      'Retrouvez ici les snippets des projets et tutos de ma chaine youtube.',
     contacts: {
       email: '#',
       telegram: '#',
@@ -35,4 +36,4 @@ module.exports = {
       vkontakte: '#'
     }
   }
-};
+}
