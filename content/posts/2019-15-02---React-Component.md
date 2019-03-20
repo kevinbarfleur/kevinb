@@ -1,6 +1,14 @@
 ---
-title: 'React Component'
-template: 'page'
+title: React Component
+date: '2019-15-19T22:40:32.169Z'
+template: 'post'
+draft: false
+slug: '/posts/react-component/'
+category: 'React'
+tags:
+  - 'Design'
+  - 'Web Development'
+description: 'PrismJS ships with a number of themes (previewable on the PrismJS website) that you can easily include in your Gatsby site, or you can build your own by copying and modifying an example (which is what we’ve done for gatsbyjs.org)'
 ---
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
