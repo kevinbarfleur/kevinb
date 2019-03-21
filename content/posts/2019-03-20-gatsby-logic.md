@@ -1,79 +1,161 @@
 ---
 template: post
-title: Gatsby Logic
-slug: /posts/Gatsby Logic
+title: Pré-requis React 1
+slug: /posts/prerequis-react-1
 draft: false
 date: 2019-03-20T15:32:19.830Z
-description: >-
-  Fast in every way that matters.
-
-  Gatsby is a free and open source framework based on React that helps
-  developers build blazing fast websites and apps
-category: WEB
+description: 'var, let, const, arrow functions et template strings'
+category: RAPPELS
 tags:
   - JAVASCRIPT
 ---
-![](/media/architecture-gatsby.webp)
+### Aujourd'hui  →
 
-There are four main ways to get started with Gatsby:
+1. `var`, `let` et `const`
+2. Arrow fonctions
+3. Les template strings
 
-Tutorial: The tutorial is written to be as accessible as possible to people without much web development experience.
-Quick start: The quick start is intended for intermediate to advanced developers who prefer to dig straight in.
+---
 
-Recipes: A happy medium between the tutorial and the quick start, find some quick answers for how to accomplish some specific, common tasks with Gatsby.
-Choose your own adventure and peruse the various sections of the Gatsby docs:
-Guides: Dive deeper into different topics around building with Gatsby, like sourcing data, deployment, and more.
+## Var, Let et Const →
 
-Ecosystem: Check out libraries for Gatsby starters and plugins, as well as external community resources.
-API Reference: Learn more about Gatsby APIs and configuration.
-Releases & Migration: Find release notes and guides for migration between major versions.
+`var` permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction) :
 
-Conceptual Guide: Read high-level overviews of the Gatsby approach.
-Behind the Scenes: Dig into how Gatsby works under the hood.
-Advanced Tutorials: Learn about topics that are too large for a doc and warrant a tutorial.
-Visit the Contributing section to find guides on the Gatsby community, code of conduct, and how to get started contributing to Gatsby.
+    var variable = 1
+    
+    if (variable === 1) {
+      var variable = 2
+    
+      console.log(variable)
+      // valeur affichée: 2
+    }
+    
+    console.log(variable)
+    // valeur affichée: 2
 
-```javascript
-import React from 'react'
-import { Link } from 'gatsby'
-import Author from './Author'
-import Comments from './Comments'
-import Content from './Content'
-import Meta from './Meta'
-import Tags from './Tags'
-import styles from './Post.module.scss'
+`let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
-const Post = ({ post }) => {
-  const { tags, title, date } = post.frontmatter
+    let variable = 1
+    
+    if (variable === 1) {
+      let variable = 2
+    
+      console.log(variable)
+      // valeur affichée: 2
+    }
+    
+    console.log(variable)
+    // valeur affichée: 1
 
-  const { html } = post
-  const { tagSlugs } = post.fields
+`const` permet de créer une constante :
 
-  return (
-    <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">
-        All Articles
-      </Link>
+    const constante = 1
+    constante = 2
+    // Error: "constante" is read-only
 
-      <div className={styles['post__content']}>
-        <Content body={html} title={title} />
-      </div>
+la constante déclaré doit toujours être assignée :
 
-      <div className={styles['post__footer']}>
-        <Meta date={date} />
-        <Tags tags={tags} tagSlugs={tagSlugs} />
-        <Author />
-      </div>
+    const value
+    // Error
 
-      <div className={styles['post__comments']}>
-        <Comments
-          postSlug={post.fields.slug}
-          postTitle={post.frontmatter.title}
-        />
-      </div>
-    </div>
-  )
-}
+    const value = 10
+    // Au top !
 
-export default Post
-```
+Attention ! La portée de `const` est aussi celle du bloc courant :
+
+    const constante = 1
+    
+    if (constante === 1) {
+      const constante = 2
+    
+      console.log(constante)
+    // valeur affichée: 2
+    }
+    
+    console.log(constante)
+    // valeur affichée: 1
+
+---
+
+## Fonctions fléchées ou Arrow functions →
+
+La manière la plus connue de déclarer une fonction :
+
+    function printHello() {
+      console.log("Hello")
+    }
+    
+    printHello()
+
+Fonction fléchées :
+
+    const printBye = () => {
+      console.log("bye")
+    }
+    
+    printBye()
+
+Ou :
+
+    const printBye = () => console.log("bye")
+    printBye()
+
+Autre exemple :
+
+    function generateID(firstname, name, age) {
+      const id = Date.now() + firstname + name + age
+      return id
+    }
+    
+    console.log(generateID("John", "Smith", 23))
+    // Affiche : 1553161821239JohnSmith23
+    
+    // Fonction fléchée
+    const generateSameID = (firstname, name, age) => Date.now() + firstname + name + age
+    
+    console.log(generateOtherID("John", "Smith", 23))
+    // Affiche : 1553161821239JohnSmith23
+
+---
+
+## Les template strings →
+
+Le principe est de faciliter le rendu dynamique des chaîne de caractères.
+
+Avant :
+
+    var name = "Sandra";
+    var sayHello = "Hello " + name; // => Hello Sandra
+
+Maintenant :
+
+    const name = `Sandra`;
+    const sayHello = `Hello ${name}`; // => Hello Sandra
+
+Les template string permettend aussi de générer des bouts d'HTML :
+
+    const html = `
+    	<div>
+    		<p>Hello !</p>
+    	<div>
+    `
+    
+    document.querySelector('.myDiv').innerHTML = html
+
+On peut même rendre le tout dynamique grace aux fonctions :
+
+    const generateUserInfo = (name, id, intro) => `
+    	<div>
+    		<h3>${name}</h3>
+    		<p>
+    			<i>${id}</i>
+    		</p>
+    		<p>${intro}</p>
+    	</div>
+    `
+    
+    document.querySelector(".myDiv").innerHTML = generateUserInfo(
+      "Mark Issou",
+      42,
+      "blablablablalbla"
+    )
