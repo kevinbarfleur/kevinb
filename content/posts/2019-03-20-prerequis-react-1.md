@@ -13,17 +13,14 @@ tags:
 ---
 ## Aujourd'hui →
 
-
-
 1. var, let et const
 2. Arrow fonctions
 3. Les template strings
 
-
-
 - - -
 
 ## Var, Let et Const →
+
 
 `var` permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction) :
 
@@ -41,7 +38,7 @@ console.log(variable)
 // valeur affichée: 2
 ```
 
-``
+
 
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
@@ -59,7 +56,7 @@ console.log(variable)
 // valeur affichée: 1
 ```
 
-``
+
 
 `const` permet de créer une constante :
 
@@ -101,12 +98,7 @@ console.log(constante)
 
 - - -
 
-
-
-
-
 ## Fonctions fléchées ou Arrow functions →
-
 
 
 La manière la plus connue de déclarer une fonction :
@@ -163,12 +155,7 @@ console.log(generateOtherID('John', 'Smith', 23))
 
 - - -
 
-
-
-
-
 ## Les template strings →
-
 
 
 Le principe est de faciliter le rendu dynamique des chaîne de caractères.
