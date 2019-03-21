@@ -27,7 +27,7 @@ module.exports = {
     name: 'Kévin B',
     photo: '/photo.jpg',
     bio:
-      'Retrouvez ici les snippets des projets et tutos de ma chaine youtube ->',
+      'Retrouvez ici les snippets des projets et tutos de ma chaine youtube.',
     contacts: {
       email: '#',
       telegram: '#',
