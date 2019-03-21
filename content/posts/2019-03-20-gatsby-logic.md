@@ -9,9 +9,11 @@ category: RAPPELS
 tags:
   - JAVASCRIPT
 ---
-### Aujourd'hui  →
+# Pré-requis React 1
 
-1. `var`, `let` et `const`
+### Aujourd'hui →
+
+1. var, let et const
 2. Arrow fonctions
 3. Les template strings
 
@@ -21,59 +23,69 @@ tags:
 
 `var` permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction) :
 
-    var variable = 1
-    
-    if (variable === 1) {
-      var variable = 2
-    
-      console.log(variable)
-      // valeur affichée: 2
-    }
-    
-    console.log(variable)
-    // valeur affichée: 2
+```javascript
+var variable = 1
+
+if (variable === 1) {
+  var variable = 2
+
+  console.log(variable)
+  // valeur affichée: 2
+}
+
+console.log(variable)
+// valeur affichée: 2
+```
 
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
-    let variable = 1
-    
-    if (variable === 1) {
-      let variable = 2
-    
-      console.log(variable)
-      // valeur affichée: 2
-    }
-    
-    console.log(variable)
-    // valeur affichée: 1
+```javascript
+let variable = 1
+
+if (variable === 1) {
+  let variable = 2
+
+  console.log(variable)
+  // valeur affichée: 2
+}
+
+console.log(variable)
+// valeur affichée: 1
+```
 
 `const` permet de créer une constante :
 
-    const constante = 1
-    constante = 2
-    // Error: "constante" is read-only
+```javascript
+const constante = 1
+constante = 2
+// Error: "constante" is read-only
+```
 
 la constante déclaré doit toujours être assignée :
 
-    const value
+```javascript
+const value
     // Error
 
     const value = 10
     // Au top !
+```
 
 Attention ! La portée de `const` est aussi celle du bloc courant :
 
-    const constante = 1
-    
-    if (constante === 1) {
-      const constante = 2
-    
-      console.log(constante)
-    // valeur affichée: 2
-    }
-    
-    console.log(constante)
-    // valeur affichée: 1
+```javascript
+const constante = 1
+
+if (constante === 1) {
+  const constante = 2
+
+  console.log(constante)
+  // valeur affichée: 2
+}
+
+console.log(constante)
+// valeur affichée: 1
+```
 
 ---
 
@@ -81,40 +93,49 @@ Attention ! La portée de `const` est aussi celle du bloc courant :
 
 La manière la plus connue de déclarer une fonction :
 
-    function printHello() {
-      console.log("Hello")
-    }
-    
-    printHello()
+```javascript
+function printHello() {
+  console.log('Hello')
+}
+
+printHello()
+```
 
 Fonction fléchées :
 
-    const printBye = () => {
-      console.log("bye")
-    }
-    
-    printBye()
+```javascript
+const printBye = () => {
+  console.log('bye')
+}
+
+printBye()
+```
 
 Ou :
 
-    const printBye = () => console.log("bye")
-    printBye()
+```javascript
+const printBye = () => console.log('bye')
+printBye()
+```
 
 Autre exemple :
 
-    function generateID(firstname, name, age) {
-      const id = Date.now() + firstname + name + age
-      return id
-    }
-    
-    console.log(generateID("John", "Smith", 23))
-    // Affiche : 1553161821239JohnSmith23
-    
-    // Fonction fléchée
-    const generateSameID = (firstname, name, age) => Date.now() + firstname + name + age
-    
-    console.log(generateOtherID("John", "Smith", 23))
-    // Affiche : 1553161821239JohnSmith23
+```javascript
+function generateID(firstname, name, age) {
+  const id = Date.now() + firstname + name + age
+  return id
+}
+
+console.log(generateID('John', 'Smith', 23))
+// Affiche : 1553161821239JohnSmith23
+
+// Fonction fléchée
+const generateSameID = (firstname, name, age) =>
+  Date.now() + firstname + name + age
+
+console.log(generateOtherID('John', 'Smith', 23))
+// Affiche : 1553161821239JohnSmith23
+```
 
 ---
 
@@ -124,27 +145,34 @@ Le principe est de faciliter le rendu dynamique des chaîne de caractères.
 
 Avant :
 
-    var name = "Sandra";
-    var sayHello = "Hello " + name; // => Hello Sandra
+```javascript
+var name = 'Sandra'
+var sayHello = 'Hello ' + name // => Hello Sandra
+```
 
 Maintenant :
 
-    const name = `Sandra`;
-    const sayHello = `Hello ${name}`; // => Hello Sandra
+```javascript
+const name = `Sandra`
+const sayHello = `Hello ${name}` // => Hello Sandra
+```
 
 Les template string permettend aussi de générer des bouts d'HTML :
 
-    const html = `
+```javascript
+const html = `
     	<div>
     		<p>Hello !</p>
     	<div>
     `
-    
-    document.querySelector('.myDiv').innerHTML = html
+
+document.querySelector('.myDiv').innerHTML = html
+```
 
 On peut même rendre le tout dynamique grace aux fonctions :
 
-    const generateUserInfo = (name, id, intro) => `
+```javascript
+const generateUserInfo = (name, id, intro) => `
     	<div>
     		<h3>${name}</h3>
     		<p>
@@ -153,9 +181,10 @@ On peut même rendre le tout dynamique grace aux fonctions :
     		<p>${intro}</p>
     	</div>
     `
-    
-    document.querySelector(".myDiv").innerHTML = generateUserInfo(
-      "Mark Issou",
-      42,
-      "blablablablalbla"
-    )
+
+document.querySelector('.myDiv').innerHTML = generateUserInfo(
+  'Mark Issou',
+  42,
+  'blablablablalbla'
+)
+```
