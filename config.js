@@ -3,7 +3,8 @@
 module.exports = {
   url: 'https://kevinb.netlify.com',
   title: 'Code - Kévin B',
-  subtitle: 'Guides et tutos pour les débutants du web',
+  subtitle:
+    'Guides et tutos pour les débutants du web : HTML, CSS, JavaScript, etc...',
   copyright: '© All rights reserved.',
   disqusShortname: '',
   postsPerPage: 4,
@@ -14,12 +15,12 @@ module.exports = {
       path: '/'
     },
     {
-      label: 'About me',
-      path: '/pages/about'
+      label: 'À propos',
+      path: '/pages/a-propos'
     },
     {
-      label: 'Contact me',
-      path: '/pages/contacts'
+      label: 'Contactez moi',
+      path: '/pages/contactez-moi'
     }
   ],
   author: {
