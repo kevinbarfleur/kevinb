@@ -65,10 +65,10 @@ la constante déclaré doit toujours être assignée :
 
 ```javascript
 const value
-    // Error
+// Error
 
-    const value = 10
-    // Au top !
+const value = 10
+// Au top !
 ```
 
 Attention ! La portée de `const` est aussi celle du bloc courant :
