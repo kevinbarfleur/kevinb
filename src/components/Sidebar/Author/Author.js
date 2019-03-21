@@ -27,7 +27,7 @@ const Author = ({ author }) => (
     <p className={styles['author__subtitle']}>
       {author.bio}
       <br />
-      <a href="https://www.youtube.com/channel/UCmtN3y7NEwAipeA-4YTiySQ?view_as=subscriber">
+      <a href="https://www.youtube.com/channel/UCmtN3y7NEwAipeA-4YTiySQ?view_as=subscriber" target="_blank">
         youtube/kevinb
       </a>
     </p>
