@@ -11,9 +11,7 @@ category: JAVASCRIPT
 tags:
   - RAPPEL ES6 JAVASCRIPT
 ---
-# Pré-requis React 1
-
-### Aujourd'hui →
+## Aujourd'hui →
 
 1. var, let et const
 2. Arrow fonctions
