@@ -9,15 +9,19 @@ description: |-
   Notions abordées  : var, let, const, arrow functions et template strings
 category: JAVASCRIPT
 tags:
-  - RAPPEL ES6 JAVASCRIPT
+  - ES6
 ---
 ## Aujourd'hui →
+
+
 
 1. var, let et const
 2. Arrow fonctions
 3. Les template strings
 
----
+
+
+- - -
 
 ## Var, Let et Const →
 
@@ -37,6 +41,8 @@ console.log(variable)
 // valeur affichée: 2
 ```
 
+``
+
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
 ```javascript
@@ -53,6 +59,8 @@ console.log(variable)
 // valeur affichée: 1
 ```
 
+``
+
 `const` permet de créer une constante :
 
 ```javascript
@@ -60,6 +68,8 @@ const constante = 1
 constante = 2
 // Error: "constante" is read-only
 ```
+
+
 
 la constante déclaré doit toujours être assignée :
 
@@ -70,6 +80,8 @@ const value
 const value = 10
 // Au top !
 ```
+
+
 
 Attention ! La portée de `const` est aussi celle du bloc courant :
 
@@ -87,9 +99,15 @@ console.log(constante)
 // valeur affichée: 1
 ```
 
----
+- - -
+
+
+
+
 
 ## Fonctions fléchées ou Arrow functions →
+
+
 
 La manière la plus connue de déclarer une fonction :
 
@@ -101,6 +119,8 @@ function printHello() {
 printHello()
 ```
 
+
+
 Fonction fléchées :
 
 ```javascript
@@ -111,12 +131,16 @@ const printBye = () => {
 printBye()
 ```
 
+
+
 Ou :
 
 ```javascript
 const printBye = () => console.log('bye')
 printBye()
 ```
+
+
 
 Autre exemple :
 
@@ -137,9 +161,15 @@ console.log(generateOtherID('John', 'Smith', 23))
 // Affiche : 1553161821239JohnSmith23
 ```
 
----
+- - -
+
+
+
+
 
 ## Les template strings →
+
+
 
 Le principe est de faciliter le rendu dynamique des chaîne de caractères.
 
@@ -150,12 +180,16 @@ var name = 'Sandra'
 var sayHello = 'Hello ' + name // => Hello Sandra
 ```
 
+
+
 Maintenant :
 
 ```javascript
 const name = `Sandra`
 const sayHello = `Hello ${name}` // => Hello Sandra
 ```
+
+
 
 Les template string permettend aussi de générer des bouts d'HTML :
 
@@ -168,6 +202,8 @@ const html = `
 
 document.querySelector('.myDiv').innerHTML = html
 ```
+
+
 
 On peut même rendre le tout dynamique grace aux fonctions :
 
