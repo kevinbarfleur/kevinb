@@ -24,10 +24,13 @@ const Author = ({ author }) => (
         <Link className={styles['author__title-link']} to="/">{author.name}</Link>
       </h2>
     )} */}
-    <p className={styles['author__subtitle']}>{author.bio}</p>
-    <a href="https://www.youtube.com/channel/UCmtN3y7NEwAipeA-4YTiySQ?view_as=subscriber">
-      youtube/kevinb
-    </a>
+    <p className={styles['author__subtitle']}>
+      {author.bio}
+      <br />
+      <a href="https://www.youtube.com/channel/UCmtN3y7NEwAipeA-4YTiySQ?view_as=subscriber">
+        youtube/kevinb
+      </a>
+    </p>
   </div>
 )
 
