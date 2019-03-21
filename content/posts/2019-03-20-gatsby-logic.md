@@ -4,10 +4,12 @@ title: Pré-requis React 1
 slug: /posts/prerequis-react-1
 draft: false
 date: 2019-03-20T15:32:19.830Z
-description: 'var, let, const, arrow functions et template strings'
-category: RAPPELS
+description: |-
+  Code de la première partie des pré-requis / rappels pour mieux aborder React.
+  Notions abordées  : var, let, const, arrow functions et template strings
+category: JAVASCRIPT
 tags:
-  - JAVASCRIPT
+  - RAPPEL ES6 JAVASCRIPT
 ---
 # Pré-requis React 1
 
