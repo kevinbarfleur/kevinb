@@ -11,8 +11,6 @@ category: JAVASCRIPT
 tags:
   - ES6
 ---
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/sxdFTcbSPSA&/0.jpg)](http://www.youtube.com/watch?v=sxdFTcbSPSA&)
-
 Salut à tous 👋
 
 **Quoi ?** 
@@ -23,11 +21,11 @@ Salut à tous 👋
 
 Même si `var` est toujours très utilisé, l'apparition de `let` et `const` permet d'avoir un bien meilleur controle de la portée de nos variables et constantes.
 
-**Plan →**
+**Comment ?**
 
-* On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne l'utilisent plus.
-* Comment se comporte `let`.
-* Et comment se comporte `const`.
+On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne l'utilisent plus.
+Comment se comporte `let`.
+Et comment se comporte `const`.
 
 - - -
 
@@ -37,14 +35,3 @@ Même si `var` est toujours très utilisé, l'apparition de `let` et `const` per
 
 Prenons une fonctions :
 
-```javascript
-var size = 1
-    
-    function getSize() {
-      var size = 2
-      console.log(size)
-    }
-    
-    console.log(size) // valeur affichée: 1
-    getSize() // valeur affichée: 2
-```
