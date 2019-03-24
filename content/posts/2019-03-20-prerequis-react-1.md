@@ -34,8 +34,6 @@ Même si `var` est toujours très utilisé, l'apparition de `let` et `const` per
 `var` permet de définir une variable globale ou locale à une fonction.
 
 Prenons une fonctions :
-
-
 ```javascript
 var size = 1
     
@@ -46,102 +44,4 @@ var size = 1
     
     console.log(size) // valeur affichée: 1
     getSize() // valeur affichée: 2
-``
-
-ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
-
-Mais dans un bloc `if` par exemple, la variable sera mis-à-jour. Et dans bien des cas, ce n'est pas notre objectif :
-
-    var size = 1
-    
-    if (size === 1) {
-      var size = 2
-    
-      console.log(size)
-      // valeur affichée: 2
-    }
-    
-    console.log(size)
-    // valeur affichée: 2
-
----
-
-### Let →
-
-les déclaration `let` et `const` permetent d'eviter se genre de problèmes.
-
-Les variables déclaré avec let et const on pour portée le bloc courant.
-
-c'est-à-dire quelle n'existent que dans ce bloc.
-
-`let` permet de déclarer une variable dont la portée est celle du bloc courant :
-
-    let size = 1
-    
-    if (variable === 1) {
-      let size = 2
-    
-      console.log(size)
-      // valeur affichée: 2
-    }
-    
-    console.log(size)
-    // valeur affichée: 1
-
-ici on vois bien que les deux variables `size` sont isolées et on chacune leurs valeurs.
-
-`let` peut être très pratique dans les boucles par exemple :
-
-avec `var` :
-
-    for (var value = 1; value < 10; value++) {
-      //console.log(value)
-    }
-    
-    console.log(value)
-
-`value` est accessible ailleurs dans le programme, c'est pas cool.
-
-avec `let` :
-
-    for (let value = 1; value < 10; value++) {
-      console.log(value)
-    }
-    
-    console.log(value) // ReferenceError: value is not defined
-
-`value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
-
----
-
-### Const →
-
-`const` permet de déclarer une constante, contrairement aux variables déclarées avec `var` et `let`, une constante, comme sont nom l'indique ne pourra pas être modifiée.
-
-De plus, c'est plutot une bonne chose d'avoir un mot-clé spécifique aux constantes, pour les reconnaitre d'un coup d'oeil.
-
-    const value = 1
-    value = 2
-    // Error: "constante" is read-only
-
-De plus, la constante déclaré doit toujours être assignée :
-
-    const value
-    // Error
-
-    const value = 10
-    // Au top !
-
-Attention ! tout comme `let`, La portée de `const` est aussi celle du bloc courant :
-
-    const value = 1
-    
-    if (value === 1) {
-      const value = 2
-    
-      console.log(value)
-    // valeur affichée: 2
-    }
-    
-    console.log(value)
-    // valeur affichée: 1
+```
