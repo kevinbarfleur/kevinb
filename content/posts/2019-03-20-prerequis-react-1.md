@@ -104,24 +104,24 @@ ici on vois bien que les deux variables `size` sont isolées et on chacune leurs
 avec `var` :
 
 ````javascript
-        for (var value = 1; value < 10; value++) {
-          //console.log(value)
-        }
+for (var value = 1; value < 10; value++) {
+  //console.log(value)
+}
 
-        console.log(value)
-        ``
+console.log(value)
+``
 
-        `value` est accessible ailleurs dans le programme, c'est pas cool.
+`value` est accessible ailleurs dans le programme, c'est pas cool.
 
-        avec `let` :
+avec `let` :
 
-        ```javascript
-        for (let value = 1; value < 10; value++) {
-          console.log(value)
-        }
+```javascript
+for (let value = 1; value < 10; value++) {
+  console.log(value)
+}
 
-        console.log(value) // ReferenceError: value is not defined
-````
+console.log(value) // ReferenceError: value is not defined
+```
 
 `value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
 
