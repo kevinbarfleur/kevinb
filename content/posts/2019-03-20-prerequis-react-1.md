@@ -115,3 +115,43 @@ for (let value = 1; value < 10; value++) {
 console.log(value) // ReferenceError: value is not defined
 ```
 
+`value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
+
+---
+
+### Const →
+
+`const` permet de déclarer une constante, contrairement aux variables déclarées avec `var` et `let`, une constante, comme sont nom l'indique ne pourra pas être modifiée.
+
+De plus, c'est plutot une bonne chose d'avoir un mot-clé spécifique aux constantes, pour les reconnaitre d'un coup d'oeil.
+
+```javascript
+const value = 1
+value = 2
+// Error: "constante" is read-only
+```
+
+De plus, la constante déclaré doit toujours être assignée :
+```javascript
+const value
+// Error
+```
+```javascript
+const value = 10
+// Au top !
+```
+
+Attention ! tout comme let, La portée de const est aussi celle du bloc courant :
+```javascript
+const value = 1
+
+if (value === 1) {
+  const value = 2
+
+  console.log(value)
+// valeur affichée: 2
+}
+
+console.log(value)
+// valeur affichée: 1
+```
