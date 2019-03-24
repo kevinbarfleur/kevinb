@@ -35,3 +35,33 @@ Et comment se comporte `const`.
 
 Prenons une fonctions :
 
+```javascript
+var size = 1
+
+function getSize() {
+  var size = 2
+  console.log(size)
+}
+
+console.log(size) // valeur affichée: 1
+getSize() // valeur affichée: 2
+
+```
+ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
+
+
+Mais dans un bloc `if` par exemple, la variable sera mis-à-jour. Et dans bien des cas, ce n'est pas notre objectif :
+
+```javascript
+var size = 1
+
+if (size === 1) {
+  var size = 2
+
+  console.log(size)
+  // valeur affichée: 2
+}
+
+console.log(size)
+// valeur affichée: 2
+```
