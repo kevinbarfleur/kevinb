@@ -45,10 +45,9 @@ function getSize() {
 
 console.log(size) // valeur affichée: 1
 getSize() // valeur affichée: 2
-
 ```
-ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
 
+ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
 
 Mais dans un bloc `if` par exemple, la variable sera mis-à-jour. Et dans bien des cas, ce n'est pas notre objectif :
 
@@ -66,7 +65,7 @@ console.log(size)
 // valeur affichée: 2
 ```
 
----
+- - -
 
 ### Let →
 
@@ -77,6 +76,7 @@ Les variables déclaré avec let et const on pour portée le bloc courant.
 c'est-à-dire quelle n'existent que dans ce bloc.
 
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
+
 ```javascript
 let size = 1
 
@@ -97,29 +97,29 @@ ici on vois bien que les deux variables `size` sont isolées et on chacune leurs
 
 avec `var` :
 
-```javascript
-for (var value = 1; value < 10; value++) {
-  //console.log(value)
-}
+````javascript
+    for (var value = 1; value < 10; value++) {
+      //console.log(value)
+    }
 
-console.log(value)
-``
+    console.log(value)
+    ``
 
-`value` est accessible ailleurs dans le programme, c'est pas cool.
+    `value` est accessible ailleurs dans le programme, c'est pas cool.
 
-avec `let` :
+    avec `let` :
 
-```javascript
-for (let value = 1; value < 10; value++) {
-  console.log(value)
-}
+    ```javascript
+    for (let value = 1; value < 10; value++) {
+      console.log(value)
+    }
 
-console.log(value) // ReferenceError: value is not defined
-```
+    console.log(value) // ReferenceError: value is not defined
+````
 
 `value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
 
----
+- - -
 
 ### Const →
 
@@ -130,20 +130,23 @@ De plus, c'est plutot une bonne chose d'avoir un mot-clé spécifique aux consta
 ```javascript
 const value = 1
 value = 2
-// Error: "constante" is read-only
+// Error: "value" is read-only
 ```
 
 De plus, la constante déclaré doit toujours être assignée :
+
 ```javascript
 const value
 // Error
 ```
+
 ```javascript
 const value = 10
 // Au top !
 ```
 
 Attention ! tout comme let, La portée de const est aussi celle du bloc courant :
+
 ```javascript
 const value = 1
 
