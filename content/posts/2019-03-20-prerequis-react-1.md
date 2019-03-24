@@ -65,3 +65,53 @@ if (size === 1) {
 console.log(size)
 // valeur affichée: 2
 ```
+
+### Let →
+
+les déclaration `let` et `const` permetent d'eviter se genre de problèmes.
+
+Les variables déclaré avec let et const on pour portée le bloc courant.
+
+c'est-à-dire quelle n'existent que dans ce bloc.
+
+`let` permet de déclarer une variable dont la portée est celle du bloc courant :
+```javascript
+let size = 1
+
+if (variable === 1) {
+  let size = 2
+
+  console.log(size)
+  // valeur affichée: 2
+}
+
+console.log(size)
+// valeur affichée: 1
+```
+
+ici on vois bien que les deux variables `size` sont isolées et on chacune leurs valeurs.
+
+`let` peut être très pratique dans les boucles par exemple :
+
+avec `var` :
+
+```javascript
+for (var value = 1; value < 10; value++) {
+  //console.log(value)
+}
+
+console.log(value)
+``
+
+`value` est accessible ailleurs dans le programme, c'est pas cool.
+
+avec `let` :
+
+```javascript
+for (let value = 1; value < 10; value++) {
+  console.log(value)
+}
+
+console.log(value) // ReferenceError: value is not defined
+```
+
