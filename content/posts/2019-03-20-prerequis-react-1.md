@@ -11,6 +11,8 @@ category: JAVASCRIPT
 tags:
   - ES6
 ---
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/sxdFTcbSPSA&/0.jpg)](http://www.youtube.com/watch?v=sxdFTcbSPSA&)
+
 Salut à tous 👋
 
 **Quoi ?** 
@@ -23,17 +25,18 @@ Même si `var` est toujours très utilisé, l'apparition de `let` et `const` per
 
 **Plan →**
 
-- On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne l'utilisent plus.
-- Comment se comporte `let`.
-- Et comment se comporte `const`.
+* On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne l'utilisent plus.
+* Comment se comporte `let`.
+* Et comment se comporte `const`.
 
----
+- - -
 
 ### Var →
 
 `var` permet de définir une variable globale ou locale à une fonction.
 
 Prenons une fonctions :
+
 ```javascript
 var size = 1
     
