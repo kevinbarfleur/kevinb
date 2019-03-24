@@ -11,203 +11,137 @@ category: JAVASCRIPT
 tags:
   - ES6
 ---
-## Aujourd'hui →
+Salut à tous 👋
 
-1. var, let et const
-2. Arrow fonctions
-3. Les template strings
+**Quoi ?** 
 
-- - -
+**Aujourd'hui** on va aborder la notions la plus basique de l'ES6, à propos de la déclaration de variables et de constantes. On va parler des mots-clés `var`, `let` et `const`.
 
-## Var, Let et Const →
+**Pourquoi ?**
 
+Même si `var` est toujours très utilisé, l'apparition de `let` et `const` permet d'avoir un bien meilleur controle de la portée de nos variables et constantes.
 
-`var` permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction) :
+**Plan →**
+
+- On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne l'utilisent plus.
+- Comment se comporte `let`.
+- Et comment se comporte `const`.
+
+---
+
+### Var →
+
+`var` permet de définir une variable globale ou locale à une fonction.
+
+Prenons une fonctions :
+
 
 ```javascript
-var variable = 1
+var size = 1
+    
+    function getSize() {
+      var size = 2
+      console.log(size)
+    }
+    
+    console.log(size) // valeur affichée: 1
+    getSize() // valeur affichée: 2
+``
 
-if (variable === 1) {
-  var variable = 2
+ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
 
-  console.log(variable)
-  // valeur affichée: 2
-}
+Mais dans un bloc `if` par exemple, la variable sera mis-à-jour. Et dans bien des cas, ce n'est pas notre objectif :
 
-console.log(variable)
-// valeur affichée: 2
-```
+    var size = 1
+    
+    if (size === 1) {
+      var size = 2
+    
+      console.log(size)
+      // valeur affichée: 2
+    }
+    
+    console.log(size)
+    // valeur affichée: 2
 
+---
 
+### Let →
+
+les déclaration `let` et `const` permetent d'eviter se genre de problèmes.
+
+Les variables déclaré avec let et const on pour portée le bloc courant.
+
+c'est-à-dire quelle n'existent que dans ce bloc.
 
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
-```javascript
-let variable = 1
+    let size = 1
+    
+    if (variable === 1) {
+      let size = 2
+    
+      console.log(size)
+      // valeur affichée: 2
+    }
+    
+    console.log(size)
+    // valeur affichée: 1
 
-if (variable === 1) {
-  let variable = 2
+ici on vois bien que les deux variables `size` sont isolées et on chacune leurs valeurs.
 
-  console.log(variable)
-  // valeur affichée: 2
-}
+`let` peut être très pratique dans les boucles par exemple :
 
-console.log(variable)
-// valeur affichée: 1
-```
+avec `var` :
 
+    for (var value = 1; value < 10; value++) {
+      //console.log(value)
+    }
+    
+    console.log(value)
 
+`value` est accessible ailleurs dans le programme, c'est pas cool.
 
-`const` permet de créer une constante :
+avec `let` :
 
-```javascript
-const constante = 1
-constante = 2
-// Error: "constante" is read-only
-```
+    for (let value = 1; value < 10; value++) {
+      console.log(value)
+    }
+    
+    console.log(value) // ReferenceError: value is not defined
 
+`value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
 
+---
 
-la constante déclaré doit toujours être assignée :
+### Const →
 
-```javascript
-const value
-// Error
+`const` permet de déclarer une constante, contrairement aux variables déclarées avec `var` et `let`, une constante, comme sont nom l'indique ne pourra pas être modifiée.
 
-const value = 10
-// Au top !
-```
+De plus, c'est plutot une bonne chose d'avoir un mot-clé spécifique aux constantes, pour les reconnaitre d'un coup d'oeil.
 
+    const value = 1
+    value = 2
+    // Error: "constante" is read-only
 
+De plus, la constante déclaré doit toujours être assignée :
 
-Attention ! La portée de `const` est aussi celle du bloc courant :
+    const value
+    // Error
 
-```javascript
-const constante = 1
+    const value = 10
+    // Au top !
 
-if (constante === 1) {
-  const constante = 2
+Attention ! tout comme `let`, La portée de `const` est aussi celle du bloc courant :
 
-  console.log(constante)
-  // valeur affichée: 2
-}
-
-console.log(constante)
-// valeur affichée: 1
-```
-
-- - -
-
-## Fonctions fléchées ou Arrow functions →
-
-
-La manière la plus connue de déclarer une fonction :
-
-```javascript
-function printHello() {
-  console.log('Hello')
-}
-
-printHello()
-```
-
-
-
-Fonction fléchées :
-
-```javascript
-const printBye = () => {
-  console.log('bye')
-}
-
-printBye()
-```
-
-
-
-Ou :
-
-```javascript
-const printBye = () => console.log('bye')
-printBye()
-```
-
-
-
-Autre exemple :
-
-```javascript
-function generateID(firstname, name, age) {
-  const id = Date.now() + firstname + name + age
-  return id
-}
-
-console.log(generateID('John', 'Smith', 23))
-// Affiche : 1553161821239JohnSmith23
-
-// Fonction fléchée
-const generateSameID = (firstname, name, age) =>
-  Date.now() + firstname + name + age
-
-console.log(generateOtherID('John', 'Smith', 23))
-// Affiche : 1553161821239JohnSmith23
-```
-
-- - -
-
-## Les template strings →
-
-
-Le principe est de faciliter le rendu dynamique des chaîne de caractères.
-
-Avant :
-
-```javascript
-var name = 'Sandra'
-var sayHello = 'Hello ' + name // => Hello Sandra
-```
-
-
-
-Maintenant :
-
-```javascript
-const name = `Sandra`
-const sayHello = `Hello ${name}` // => Hello Sandra
-```
-
-
-
-Les template string permettend aussi de générer des bouts d'HTML :
-
-```javascript
-const html = `
-    	<div>
-    		<p>Hello !</p>
-    	<div>
-    `
-
-document.querySelector('.myDiv').innerHTML = html
-```
-
-
-
-On peut même rendre le tout dynamique grace aux fonctions :
-
-```javascript
-const generateUserInfo = (name, id, intro) => `
-    	<div>
-    		<h3>${name}</h3>
-    		<p>
-    			<i>${id}</i>
-    		</p>
-    		<p>${intro}</p>
-    	</div>
-    `
-
-document.querySelector('.myDiv').innerHTML = generateUserInfo(
-  'Mark Issou',
-  42,
-  'blablablablalbla'
-)
-```
+    const value = 1
+    
+    if (value === 1) {
+      const value = 2
+    
+      console.log(value)
+    // valeur affichée: 2
+    }
+    
+    console.log(value)
+    // valeur affichée: 1
