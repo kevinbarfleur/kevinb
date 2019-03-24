@@ -66,6 +66,8 @@ console.log(size)
 // valeur affichée: 2
 ```
 
+---
+
 ### Let →
 
 les déclaration `let` et `const` permetent d'eviter se genre de problèmes.
