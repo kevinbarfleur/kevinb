@@ -1,6 +1,6 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { PureAuthor as Author } from './Author';
+import React from 'react'
+import renderer from 'react-test-renderer'
+import { PureAuthor as Author } from './Author'
 
 describe('Author', () => {
   it('renders correctly', () => {
@@ -10,17 +10,14 @@ describe('Author', () => {
           siteMetadata: {
             author: {
               name: 'test',
-              bio: 'test',
-              contacts: {
-                twitter: 'test'
-              }
+              bio: 'test'
             }
           }
         }
       }
-    };
+    }
 
-    const tree = renderer.create(<Author {...props} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+    const tree = renderer.create(<Author {...props} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

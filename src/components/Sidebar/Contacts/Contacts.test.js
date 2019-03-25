@@ -1,21 +1,17 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Contacts from './Contacts';
+import React from 'react'
+import renderer from 'react-test-renderer'
+import Contacts from './Contacts'
 
 describe('Contacts', () => {
   const props = {
     contacts: {
       email: '#',
-      twitter: '#',
-      vkontakte: '#',
-      github: '#',
-      rss: '#',
-      telegram: '#'
+      github: '#'
     }
-  };
+  }
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Contacts {...props} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+    const tree = renderer.create(<Contacts {...props} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})
