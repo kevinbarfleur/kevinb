@@ -1,13 +1,13 @@
 ---
 template: post
-title: 'Pré-requis React 1 : var, let et const'
+title: 'Var, Let et Const'
 slug: /posts/prerequis-react-1
 draft: false
 date: 2019-03-20T15:32:19.830Z
 description: |-
   Première partie des pré-requis / rappels pour mieux aborder React.
   Notions abordées  : var, let, const.
-category: JAVASCRIPT
+category: 'JAVASCRIPT, PRÉ-REQUIS REACT'
 tags:
   - ES6
 ---
