@@ -30,7 +30,11 @@ module.exports = {
       'Retrouvez ici les snippets des projets et tutos de ma chaine youtube.',
     contacts: {
       email: 'kevinbarfleur.contact@gmail.com',
-      github: 'https://github.com/kevinbarfleur'
+      telegram: '#',
+      twitter: '#',
+      github: 'https://github.com/kevinbarfleur',
+      rss: '#',
+      vkontakte: '#'
     }
   }
 }
