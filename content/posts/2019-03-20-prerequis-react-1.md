@@ -11,6 +11,9 @@ category: JAVASCRIPT
 tags:
   - ES6
 ---
+![javascript-image-var-let-const](/media/javascript-tutoriel-const-let-var.png "Tutoriel Javascript : var, let et const")
+
+
 
 Salut à tous 👋
 
@@ -28,7 +31,7 @@ On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne
 Comment se comporte `let`.
 Et comment se comporte `const`.
 
----
+- - -
 
 ### Var →
 
@@ -66,7 +69,7 @@ console.log(size)
 // valeur affichée: 2
 ```
 
----
+- - -
 
 ### Let →
 
@@ -120,7 +123,7 @@ console.log(value) // ReferenceError: value is not defined
 
 `value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
 
----
+- - -
 
 ### Const →
 
