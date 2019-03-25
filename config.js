@@ -25,12 +25,12 @@ module.exports = {
   ],
   author: {
     name: 'Kévin B',
-    photo: '/photo.jpg',
+    photo: '/photo.gif',
     bio:
       'Retrouvez ici les snippets des projets et tutos de ma chaine youtube.',
     contacts: {
       email: 'kevinbarfleur.contact@gmail.com',
-      github: 'https://github.com/kevinbarfleur',
+      github: 'https://github.com/kevinbarfleur'
     }
   }
 }
