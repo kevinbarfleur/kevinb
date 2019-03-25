@@ -6,8 +6,8 @@ draft: false
 date: 2019-03-20T15:32:19.830Z
 description: |-
   Première partie des pré-requis / rappels pour mieux aborder React.
-  Notions abordées -> var, let, const.
-category: 'PRÉ-REQUIS REACT'
+  Notions abordées : var, let, const.
+category: PRÉ-REQUIS REACT
 tags:
   - Javascript
   - ES6
