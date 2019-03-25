@@ -151,7 +151,7 @@ const value = 10
 // Au top !
 ```
 
-Attention ! tout comme `let, La portée de`const est aussi celle du bloc courant :
+Attention ! tout comme `let`, La portée de `const` est aussi celle du bloc courant :
 
 ```javascript
 const value = 1
