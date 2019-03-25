@@ -11,9 +11,10 @@ category: JAVASCRIPT
 tags:
   - ES6
 ---
+
 Salut à tous 👋
 
-**Quoi ?** 
+**Quoi ?**
 
 **Aujourd'hui** on va aborder la notions la plus basique de l'ES6, à propos de la déclaration de variables et de constantes. On va parler des mots-clés `var`, `let` et `const`.
 
@@ -27,7 +28,7 @@ On va voir comment se comporte `var`, et pourquoi de plus en plus de personne ne
 Comment se comporte `let`.
 Et comment se comporte `const`.
 
-- - -
+---
 
 ### Var →
 
@@ -49,8 +50,6 @@ getSize() // valeur affichée: 2
 
 ici, la premiere variable `size` déclaré est globale, et la deuxieme est locale à la fonction `getSize()`, l'une n'interfère pas sur l'autre.
 
-
-
 Mais dans un bloc `if` par exemple, la variable sera mis-à-jour. Et dans bien des cas, ce n'est pas notre objectif :
 
 ```javascript
@@ -67,7 +66,7 @@ console.log(size)
 // valeur affichée: 2
 ```
 
-- - -
+---
 
 ### Let →
 
@@ -76,8 +75,6 @@ les déclaration `let` et `const` permetent d'eviter se genre de problèmes.
 Les variables déclaré avec let et const on pour portée le bloc courant.
 
 c'est-à-dire quelle n'existent que dans ce bloc.
-
-
 
 `let` permet de déclarer une variable dont la portée est celle du bloc courant :
 
@@ -97,19 +94,17 @@ console.log(size)
 
 ici on vois bien que les deux variables `size` sont isolées et on chacune leurs valeurs.
 
-
-
 `let` peut être très pratique dans les boucles par exemple :
 
 avec `var` :
 
-````javascript
+```javascript
 for (var value = 1; value < 10; value++) {
   //console.log(value)
 }
 
 console.log(value)
-``
+```
 
 `value` est accessible ailleurs dans le programme, c'est pas cool.
 
@@ -125,9 +120,7 @@ console.log(value) // ReferenceError: value is not defined
 
 `value` n'existe que dans cette boucle, on peut donc, si l'envie nous prend la déclarer ailleurs, pour une autre boucle par exemple.
 
-
-
-- - -
+---
 
 ### Const →
 
@@ -141,8 +134,6 @@ value = 2
 // Error: "value" is read-only
 ```
 
-
-
 De plus, la constante déclaré doit toujours être assignée :
 
 ```javascript
@@ -155,8 +146,6 @@ const value = 10
 // Au top !
 ```
 
-
-
 Attention ! tout comme `let, La portée de`const est aussi celle du bloc courant :
 
 ```javascript
@@ -166,7 +155,7 @@ if (value === 1) {
   const value = 2
 
   console.log(value)
-// valeur affichée: 2
+  // valeur affichée: 2
 }
 
 console.log(value)
