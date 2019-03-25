@@ -12,7 +12,7 @@ export const PureAuthor = ({ data }) => {
         {author.bio}
         <a
           className={styles['author__bio-twitter']}
-          href={getContactHref('twitter', author.contacts.twitter)}
+          href="https://www.youtube.com/channel/UCmtN3y7NEwAipeA-4YTiySQ"
           rel="noopener noreferrer"
           target="_blank"
         >

@@ -39,12 +39,8 @@ export const Sidebar = props => (
               photo
               bio
               contacts {
-                twitter
-                telegram
                 github
                 email
-                rss
-                vkontakte
               }
             }
           }
