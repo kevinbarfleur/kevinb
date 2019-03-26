@@ -2,7 +2,7 @@
 template: page
 title: À Propos
 slug: /pages/a-propos
-draft: true
+draft: false
 ---
 Bienvenue 👋
 
