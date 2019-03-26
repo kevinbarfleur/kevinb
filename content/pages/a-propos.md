@@ -4,8 +4,7 @@ title: À Propos
 slug: /pages/a-propos
 draft: false
 ---
-
-![Image of Yaktocat](/media/k-gif-moshed.gif)
+![Kévin B, Tutoriels Javascript](/media/k-gif-moshed.gif "À propos, Tutoriels Javascript")
 
 Bienvenue 👋
 
