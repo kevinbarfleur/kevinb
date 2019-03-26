@@ -4,6 +4,9 @@ title: À Propos
 slug: /pages/a-propos
 draft: false
 ---
+
+![Image of Yaktocat](/media/k-gif-moshed.gif)
+
 Bienvenue 👋
 
 J’ai toujours été attiré par l’innovation technologique. L’un des aspects cette innovation, le Web, a suscité mon intérêt en raison de la place qu’il accorde depuis quelques années au visuel.
