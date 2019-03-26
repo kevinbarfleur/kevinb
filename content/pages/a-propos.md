@@ -1,12 +1,15 @@
 ---
-title: 'À Propos'
-template: 'page'
+template: page
+title: À Propos
+slug: /pages/a-propos
+draft: true
 ---
+Bienvenue 👋
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+J’ai toujours été attiré par l’innovation technologique. L’un des aspects cette innovation, le Web, a suscité mon intérêt en raison de la place qu’il accorde depuis quelques années au visuel.
 
-![Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi.](/media/image-2.jpg)
+J’ai donc entrepris de me former dans ce milieu en autodidacte. Par chance, le web fourmille de ressources en tout genre sur lesquelles j’ai pu travailler ces deux dernières années.
 
-_Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi._
+Aujourd'hui, je travail en tant que développeur freelance et j'ai décidé d'aider d'aider les débutant à passer les caps de difficultés les plus fréquents.
 
-Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+Ici, vous trouverez les résumés et les snippets de code présent dans mes guides et tutoriels.
