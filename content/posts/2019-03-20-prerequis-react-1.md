@@ -15,8 +15,6 @@ tags:
 
 ## Pré-requis React 1.
 
-![javascript-image-var-let-const](/media/javascript-tutoriel-const-let-var.png 'Tutoriel Javascript : var, let et const')
-
 Salut à tous 👋
 
 **Quoi ?**
