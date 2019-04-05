@@ -15,7 +15,7 @@ tags:
 
 ## Pré-requis React 1.
 
-Salut à tous 👋
+Bonjour à tous 👋
 
 **Quoi ?**
 
