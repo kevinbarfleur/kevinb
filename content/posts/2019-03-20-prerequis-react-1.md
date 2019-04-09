@@ -19,7 +19,7 @@ Bonjour à tous 👋
 
 **Quoi ?**
 
-**Aujourd'hui** on va aborder la notions la plus basique de l'ES6, à propos de la déclaration de variables et de constantes. On va parler des mots-clés `var`, `let` et `const`.
+Aujourd'hui on va aborder la notions la plus basique de l'ES6, à propos de la déclaration de variables et de constantes. On va parler des mots-clés `var`, `let` et `const`.
 
 **Pourquoi ?**
 
